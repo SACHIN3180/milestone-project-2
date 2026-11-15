@@ -1,15 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home page</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
+
 <body>
-    <header>
-        <div>
-            <h2>CryptoPulse</h2>
+
+    <header class="w-full bg-[#334155] shadow-lg">
+        <div class="flex px-[62px] py-[12px]  justify-between items-center">
+            <div>
+                <a href="index.html">
+                    <h2 class="text-2xl font-bold font-stretch-normal text-[#06b6d4]">
+                        CryptoPulse
+                    </h2>
+                </a>
+            </div>
+            <div class="flex items-center">
+                <ul class="flex px-[42px] py-[12px] justify-between gap-x-[24px] items-center">
+                    <a href="index.html">
+                        <li class="text-[#06b6d4] font-medium">Cryptocurrencies</li>
+                    </a>
+                    <a href="exchanges.html">
+                        <li class="text-white font-medium hover:text-[#06b6d4]">Exchanges</li>
+                    </a>
+                    <a href="login.html">
+                        <li class="text-white font-medium hover:text-[#06b6d4]">Login</li>
+                    </a>
+                    <a href="signup.html">
+                        <li class="text-white font-medium hover:text-[#06b6d4]">Sign Up</li>
+                    </a>
+                </ul>
+                <button class="bg-[#334169] px-[12px] py-[6px] text-white rounded-lg shadow-lg ">
+                    <i class="fa-solid fa-sun text-yellow-700"></i> Light
+                </button>
+            </div>
         </div>
     </header>
+
+    <!-- <div class="border-b border-gray-900 "></div> -->
+    <hr class="border-gray-600">
+
+    <section class="w-full bg-[#334155] pt-8 pb-4 ">
+
+        <div class="w-1240px px-20">
+            <h1 class="text-white font-bold text-3xl">Cryptocurrency Prices</h1>
+
+            <p class="text-gray-300 my-4">Track live cryptocurrency prices, market capitalization and market changes.
+            </p>
+
+            <div class="grid grid-cols-3 gap-4 py-4">
+                <div class="bg-blue-300 border-1 border-gray-300 px-12 py-4 rounded-lg">
+                    <p class="text-[#334155]">Cryptocurrencies</p>
+
+                    <p class="text-2xl font-bold text-white mt-2">20</p>
+                </div>
+                <div class="bg-blue-300 border-1 border-gray-300 px-12 py-4 rounded-lg">
+                    <p class="text-[#334155]">Showing Results</p>
+
+                    <p class="text-2xl font-bold text-white mt-2">20</p>
+                </div>
+                <div class="bg-blue-300 border-1 border-gray-300 px-12 py-4 rounded-lg">
+                    <p class="text-[#334155]">Your Watchlist</p>
+
+                    <p class="text-2xl font-bold text-white mt-2">2</p>
+                </div>
+            </div>
+
+            <div class="bg-blue-300 border border-gray-400 rounded-lg px-6 py-4
+            grid grid-cols-12 gap-4">
+
+                <div class="col-span-6 border border-gray-400 rounded-lg px-4 py-3">
+                    <input type="text" placeholder="Search cryptocurrency..."
+                        class="w-full outline-none bg-transparent">
+                </div>
+
+                <div class="col-span-3 border border-gray-400 rounded-lg px-4 py-3 bg-[#334155]">
+                    <select class="w-full outline-none bg-[#334155] text-white">
+                        <option>Market Cap: High to Low</option>
+                        <option>Market Cap: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Price: Low to High</option>
+                    </select>
+                </div>
+
+                <div class="col-span-2">
+                    <button class="w-full bg-[#334155] text-white cursor-pointer
+                       px-4 py-3 rounded-lg border border-gray-300">
+                        Watchlist
+                    </button>
+                </div>
+
+                <div class="col-span-1">
+                    <button class="w-full bg-purple-800 text-white cursor-pointer
+                       px-2 py-3 rounded-lg border border-gray-300">
+                        Refresh
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-blue-300 border border-gray-400 rounded-lg px-6 py-4 mt-4 overflow-x-auto">
+
+                <table class="w-full text-left">
+
+                    <thead>
+                        <tr class="border-b-2 border-gray-400 text-[#334155]">
+                            <th class="px-4 py-3">#</th>
+                            <th class="px-4 py-3">Name</th>
+                            <th class="px-4 py-3">Price</th>
+                            <th class="px-4 py-3">24h Change</th>
+                            <th class="px-4 py-3">Market Cap</th>
+                            <th class="px-4 py-3">Watchlist</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr class="border-b border-gray-400">
+                            <td class="px-4 py-4">1</td>
+                            <td class="px-4 py-4">Bitcoin</td>
+                            <td class="px-4 py-4">$95,000</td>
+                            <td class="px-4 py-4 text-green-700">+2.5%</td>
+                            <td class="px-4 py-4">$1.8T</td>
+                            <td class="px-4 py-4">View</td>
+                        </tr>
+
+                        <tr class="border-b border-gray-400">
+                            <td class="px-4 py-4">2</td>
+                            <td class="px-4 py-4">Ethereum</td>
+                            <td class="px-4 py-4">$3,200</td>
+                            <td class="px-4 py-4 text-red-700">-1.2%</td>
+                            <td class="px-4 py-4">$380B</td>
+                            <td class="px-4 py-4">View</td>
+                        </tr>
+
+                        <tr class="border-b border-gray-400">
+                            <td class="px-4 py-4">3</td>
+                            <td class="px-4 py-4">Solana</td>
+                            <td class="px-4 py-4">$180</td>
+                            <td class="px-4 py-4 text-green-700">+3.4%</td>
+                            <td class="px-4 py-4">$80B</td>
+                            <td class="px-4 py-4">View</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+    </section>
+
 </body>
+
 </html>
