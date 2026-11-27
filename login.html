@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body class="bg-[#334155] ">
+
+    <header id="header" class="w-full bg-[#334155] shadow-lg top-0 sticky z-50">
+        <div class="flex lg:px-[62px] sm:px-8 py-[12px]  justify-between items-center">
+            <div>
+                <a href="index.html">
+                    <h2 class="text-2xl font-bold font-stretch-normal text-[#06b6d4]">
+                        CryptoPulse
+                    </h2>
+                </a>
+            </div>
+
+            <button id="menuBtn" class="lg:hidden text-white text-2xl cursor-pointer">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div id="navMenu" class="fixed flex top-0 p-6 right-0 h-screen w-72 max-w-[85%] bg-[#334155] 
+                 flex-col gap-4 translate-x-full transition-transform duration-300
+                lg:static lg:h-auto lg:w-auto lg:max-w-none lg:flex-row 
+                lg:items-center lg:p-0 lg:gap-0  items-center lg:translate-x-0">
+
+                <button id="closeBtn" class="lg:hidden text-white text-2xl cursor-pointer">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+                <ul class="lg:flex-row flex flex-col px-0 lg:px-[42px] py-[12px] 
+                    lg:justify-between items-start lg:gap-x-[24px] lg:items-center gap-[24px]">
+                    <a href="index.html">
+                        <li class="text-white font-medium hover:text-[#06b6d4]">Cryptocurrencies</li>
+                    </a>
+                    <a href="exchanges.html">
+                        <li class="text-white font-medium hover:text-[#06b6d4]">Exchanges</li>
+                    </a>
+                    <a href="login.html">
+                        <li class="text-[#06b6d4] font-medium hover:text-[#06b6d4]">Login</li>
+                    </a>
+                    <a href="signup.html">
+                        <li class="text-white font-medium hover:text-[#06b6d4]">Sign Up</li>
+                    </a>
+                </ul>
+
+                <button id="themeBtn" class="bg-[#334169] px-[12px] py-[6px] text-white rounded-lg      
+                           cursor-pointer shadow-lg ">
+                    <i class="fa-solid fa-sun text-yellow-700"></i> Light
+                </button>
+            </div>
+        </div>
+    </header>
+    <div id="menuOverlay" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden"></div>
+
+    <main class="min-h-[80vh] flex items-center justify-center px-4 py-10 ">
+
+        <div class="card border rounded-2xl p-8 w-full max-w-md bg-white shadow-lg">
+
+            <h1 class="text-3xl font-bold text-center mb-2">
+                Welcome Back
+            </h1>
+
+            <p class="muted-text text-center mb-8">
+                Login to your CryptoPulse account.
+            </p>
+
+            <form id="loginForm" class="space-y-5 ">
+
+                <div>
+                    <label class="block mb-2 text-sm font-semibold">
+                        Email Address
+                    </label>
+
+                    <input type="email" id="email" required placeholder="Enter your email"
+                        class="input-field border rounded-lg px-4 py-3 w-full outline-none focus:border-cyan-500">
+                </div>
+
+                <div>
+                    <label class="block mb-2 text-sm font-semibold">
+                        Password
+                    </label>
+
+                    <input type="password" id="password" required placeholder="Enter your password"
+                        class="input-field border rounded-lg px-4 py-3 w-full outline-none focus:border-cyan-500">
+                </div>
+
+                <p id="message" class="text-sm"></p>
+
+                <button type="submit"
+                    class="w-full bg-cyan-600 hover:bg-cyan-700 text-white py-3 rounded-lg font-semibold">
+                    Login
+                </button>
+
+            </form>
+
+            <p class="text-center muted-text mt-6 text-sm">
+                Don't have an account?
+                <a href="signup.html" class="text-cyan-500 hover:underline">
+                    Sign Up
+                </a>
+            </p>
+
+        </div>
+
+    </main> 
+
+    <footer id="footer" class="w-full bg-[#334155]">
+
+        <div class="px-4 sm:px-8 lg:px-12 xl:px-20 py-8
+        grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <div>
+                <h2 class="text-2xl font-bold text-[#06b6d4]">
+                    CryptoPulse
+                </h2>
+
+                <p class="text-gray-300 mt-4">
+                    Track cryptocurrency prices, market cap and daily market changes.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="text-white font-bold text-lg mb-4">Quick Links</h3>
+
+                <ul class="text-gray-300 space-y-3">
+                    <li><a href="index.html" class="text-md hover:text-[#06b6d4]">Cryptocurrencies</a></li>
+                    <li><a href="exchanges.html" class="text-md hover:text-[#06b6d4]">Exchanges</a></li>
+                    <li><a href="login.html" class="text-md hover:text-[#06b6d4]">Login</a></li>
+                    <li><a href="signup.html" class="text-md hover:text-[#06b6d4]">Sign Up</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-white font-bold text-lg mb-4">Resources</h3>
+
+                <ul class="text-gray-300 space-y-3">
+                    <li><a href="#" class="text-md hover:text-[#06b6d4]">Market Overview</a></li>
+                    <li><a href="#" class="text-md hover:text-[#06b6d4]">Watchlist</a></li>
+                    <li><a href="#" class="text-md hover:text-[#06b6d4]">Price Tracking</a></li>
+                    <li><a href="#" class="text-md hover:text-[#06b6d4]">Help Center</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-white font-bold text-lg mb-4">Follow Us</h3>
+
+                <div class="flex gap-5 text-xl text-gray-300">
+                    <a href="#"><i class="fa-brands fa-facebook hover:text-[#06b6d4]"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram hover:text-[#06b6d4]"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter hover:text-[#06b6d4]"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin hover:text-[#06b6d4]"></i></a>
+                </div>
+
+                <p class="text-gray-300 mt-4">
+                    Get the latest updates on cryptocurrency markets.
+                </p>
+            </div>
+
+        </div>
+
+        <hr class="border-gray-600">
+
+        <div class="px-4 sm:px-8 lg:px-12 xl:px-20 py-5
+        flex flex-col sm:flex-row justify-between items-center gap-3 text-center sm:text-left">
+
+            <p class="text-gray-300 text-sm">
+                © 2026 CryptoPulse. All rights reserved.
+            </p>
+
+            <p class="text-gray-300 text-sm">
+                Cryptocurrency Market Tracker
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+<script src="popup.js"></script>
+<script src="theme.js"></script>
+
+</html>
